@@ -1,11 +1,42 @@
-# Cooking AI Agent
+# Cooking AI Agent 🧑‍🍳
 
-What To Cook Today AI Agent 🍑 🍅 🥔 🍠 🥚 🍳 🍲 🥕 🌶️ 🥦 🧄 🫘 🫚 🫛 🍄‍🟫 🥟 🍤 🍝 🍜 🍚 🍛 🥗 🍣 🥪 🥙 🌯 🫔 🍞 🧀 🥐 🥖 🫓 🍮 🍓 🤯
+An intelligent culinary assistant designed to simplify meal planning, manage personal recipes, and generate shopping lists tailored to your unique tastes and dietary needs.
 
-## Enola 🕵🏾‍♀️
+## ✨ Features
 
-**TODO** _Usage instructions..._
+Personalized Meal Planning: Get suggestions for a single meal or a full x-day plan based on your profile.
 
-## License
+**Preference Management:** The agent stores and recalls your dietary restrictions, allergies, likes, and dislikes from a local preferences.md file.
 
-[Cooking AI Agent](https://github.com/enola-dev/cooking-agent) © 2025 by [Enola Authors](https://docs.enola.dev/agents) is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+**Digital Cookbook:** Automatically saves confirmed meal plan recipes to a cookbook.md file, creating a personal recipe collection over time.
+
+**Smart Shopping Lists:** Generates a consolidated shopping list for your meal plan, neatly categorized by supermarket section (Produce, Dairy, etc.).
+
+**Local Filesystem Interaction:** Directly reads and writes to your local files (cookbook.md, preferences.md) to maintain your data.
+
+**Interactive Workflow:** Proposes plans and waits for your confirmation before taking action, allowing you to make swaps or changes.
+
+## 🚀 Getting Started
+
+Prerequisites: 
+- [enola.dev](https://github.com/enola-dev/enola)
+- [a Google Gemini API Key](https://aistudio.google.com/apikey) 
+- [a Brave Search API Key](https://brave.com/search/api/)
+## Usage
+1. Store the keys in `~/.config/enola/azkaban.yaml`
+    ```bash
+    mkdir -p ~/.config/enola 
+    echo GOOGLE_AI_API_KEY=... >>~/.config/enola/azkaban.yaml
+    echo BRAVE_API_KEY=... >>~/.config/enola/azkaban.yaml
+    ```
+2. Install [enola.dev](https://docs.enola.dev/use/).
+3. Git clone [this repo](https://github.com/enola-dev/cooking-agent/)
+4. Change the end of the file [chef.enola.agent.yaml](https://github.com/enola-dev/cooking-agent/blob/main/chef.enola.agent.yaml) to put paths of your `cookbook.md` and `preferences.md`
+5. Run (don't forget to change the path to `chef.enola.agent.yaml`):
+    ```bash
+    enola server --chatPort=7070 -a ./chef.enola.agent.yaml
+    ```
+
+## 📜 License
+
+This project is licensed under the CC-BY-SA-4.0 license. See the LICENSE file for more details.
