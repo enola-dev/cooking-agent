@@ -36,7 +36,7 @@ Prerequisites:
     ```bash
     enola server --chatPort=7070 -a ./chef.enola.agent.yaml
     ```
-
+6. Go to http://localhost:7070
 ## 📜 License
 
 This project is licensed under the CC-BY-SA-4.0 license. See the LICENSE file for more details.
